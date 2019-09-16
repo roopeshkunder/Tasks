@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+    <script data-require="angular.js@1.5.0" data-semver="1.5.0" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+    
+    <script src="script.js"></script>
+  </head>
+
+  <body ng-app="myapp">
+    <h2>STARWARS Characters</h2>
+	<input type="text" placeholder="Search" ng-model="userSearch">
+	<p><b>List of Characters</b></p>
+    <div ng-controller="testController">
+	<div ng-hide="loaded">
+  <img src="Loader1.gif"/>
+</div>
+      <div ng-repeat="x in posts">
+	  <li ng-repeat="y in x | filter:userSearch">{{y.name}}</li>        
+      </div>
+	  
+	  <p><b>Average Height of Characters</b> : {{averageHeight}}</p>
+	  
+	  <p><b>Difference between the oldest ({{oldest}}) and youngest ({{youngest}}) character </b> : {{differenceInAges}}</p>
+	  
+	  <p><b>Distrubition of Eye colour of Star War Characters :-</b></p>
+	  
+	  <p>Total Characters having Brown Eyes : {{eyecolorBrown}} </p>
+	  Name of Characters having Brown Eyes : <li ng-repeat="character in eyecolorBrownCharacters">{{character}}</li>
+	  
+	  <p>Total Characters having Black Eyes : {{eyecolorBlack}} </p>
+	  Name of Characters having Black Eyes : <li ng-repeat="character in eyecolorBlackCharacters">{{character}}</li>
+	  
+	  <p>Total Characters having Hazel Eyes : {{eyecolorHazel}} </p>
+	  Name of Characters having Hazel Eyes : <li ng-repeat="character in eyecolorHazelCharacters">{{character}}</li>
+	  
+	  <p>Total Characters having Dark Eyes : {{eyecolorDark}} </p>
+	  Name of Characters having Dark Eyes : <li ng-repeat="character in eyecolorDarkCharacters">{{character}}</li>
+	  
+	  <p>Total Characters having White Eyes : {{eyecolorWhite}} </p>
+	  Name of Characters having White Eyes : <li ng-repeat="character in eyecolorWhiteCharacters">{{character}}</li>
+	  
+	  <p>Total Characters having Gold Eyes : {{eyecolorGold}} </p>
+	  Name of Characters having Gold Eyes : <li ng-repeat="character in eyecolorGoldCharacters">{{character}}</li>
+	  
+	  <p>Total Characters having Blue Eyes : {{eyecolorBlue}} </p>
+	  Name of Characters having Blue Eyes : <li ng-repeat="character in eyecolorBlueCharacters">{{character}}</li>
+	  
+	  <p>Total Characters having Yellow Eyes : {{eyecolorYellow}} </p>
+	  Name of Characters having Yellow Eyes : <li ng-repeat="character in eyecolorYellowCharacters">{{character}}</li>
+	  
+	  <p>Total Characters having Orange Eyes : {{eyecolorOrange}} </p>
+	  Name of Characters having Orange Eyes : <li ng-repeat="character in eyecolorOrangeCharacters">{{character}}</li>
+	  
+	  <p>Total Characters having Pink Eyes : {{eyecolorPink}} </p>
+	  Name of Characters having Pink Eyes : <li ng-repeat="character in eyecolorPinkCharacters">{{character}}</li>
+	  
+	  <p>Total Characters having Red Eyes : {{eyecolorRed}} </p>
+	  Name of Characters having Red Eyes : <li ng-repeat="character in eyecolorRedCharacters">{{character}}</li>
+	  
+	  <p>Total Characters having Blue-Gray Eyes : {{eyecolorBlueGray}} </p>
+	  Name of Characters having Blue-Gray Eyes : <li ng-repeat="character in eyecolorBlueGrayCharacters">{{character}}</li>
+	  
+	 
+    </div>
+  </body>
+
+</html>
+<!--brown, black, hazel, dark, white, gold, blue, yellow, orange, pink, red, blue-gray-->
